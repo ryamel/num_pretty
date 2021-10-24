@@ -17,11 +17,11 @@
 /*
   Approach
 
-  I tackle this problem converting the number to a string immediatly as I believe it to be easier to deal with strings 
-  than numbers when it comes to checking character position. 
+  It is clear I will need to split the cases between millions, billions, and trillions as I will be appending 'M', 'B', or 'T' to the string.
+  I will be looking at the length of the number so I can determine which case it is. I believe it to be easier to deal with strings than numbers 
+  in this case.
   
-  It is clear I will neede to split the cases between millions, billions, and trillions as I will be appending 'M', 'B', or 'T' to the string.
-  By looking at the length of the number I can determine which case.
+  So I first convert the input number to a string. I use parseInt() here to remove any decimals that will affect string length.
 
   See Assumptions about truncation. I chose to always add one decimal place to the number, unless that decimal would be 0. I think this approach is valid, because 
   there is no point in appending a zero decimal if we are using a number prettifer ('12M' opposed to '12.0M'). 
